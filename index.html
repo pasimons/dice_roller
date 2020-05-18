@@ -8,19 +8,22 @@
 
    </head>
 <body>
-     <label for="roll">Number Of Dice Rolls:<img src="download2.jpeg" alt="dice photo" height="50" width="50"></label>
+     <label id ="number-of-rolls">Number Of Dice Rolls:<img src="gif.dice.webp" alt="dice photo" height="100" width="100"></label>
     <br>
     <br>
 
 
-    <input type="text" id="dicesroll" name="dicesroll" required
-    minlength="4" maxlength="8" size="10"><button id="favorite-style" type="button">Roll!</button>
+    <input type="text" id="dice-roll-display" name="dice-roll-display" required
+    minlength="4" maxlength="8" size="10"></input>
+    <button id="roll" type="button">Roll!</button>
+
+    <div id = "dieRolls"></div>
     <br>
     <br>
 
     <button id="show-all">Show All Rolls</button>
 
-    <ol id="number-of-diceroll"></ol>
+    <ol id="number-of-dice-roll"></ol>
 
 </body>
 <script src="main.js"></script>
