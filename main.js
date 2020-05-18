@@ -1,33 +1,48 @@
-let diceRollDisplay = document.querySelector('#dice-roll-display');
-diceRollDisplay.addEventListener("click", function(){
-    console.log("dice-roll-display");
-})
-
-
-let roll = document.querySelector('roll');
-roll.addEventListener("click", function(){
-    console.log('roll');
-})
-
-
-// let dieRolls = document.querySelector('#dieRolls');
-// dieRolls.addEventListener("click", function(){
-//     console.log("dieRolls");
-// })
-
-var dieRolls = new Array();
-
-
 let showAll = document.querySelector('#show-All');
-showAll.addEventListener("click", function(){
-    console.log("show-all");
-})
-
-
+let diceRollInput = document.querySelector('#dice-roll-input');
 let numberOfDiceRoll = document.querySelector('number-of-dice-roll');
-numberOfDiceRoll.addEventListener("click", function(){
-    console.log("number-of-dice-roll");
+let letsRoll = document.querySelector('#lets-roll');
+
+
+var dieRolls = []
+
+
+
+
+
+letsRoll.addEventListener("click", function(){
+    console.log("lets-roll");
+    console.log(diceRollInput.value)
+    let rolls = diceRollInput.value 
+    console.log(rolls)
+
+    var letsRolls = {
+        sides: 6,
+        roll: function () {
+          var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+          return randomNumber;
+        }
+      }
+      
+      function printNumber(number) {
+        var diceRollInput = document.getElementById('diceRollInput');
+        diceRollInput.innerHTML = number;
+      }
+      
+      var diceRollInput = document.getElementById('button');
+      
+      diceRollInput.onclick = function() {
+        var result = dice.roll();
+        printNumber(result);
+      };
+      
+      
 })
+
+
+
+
+
 
 
 
