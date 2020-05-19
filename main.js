@@ -4,7 +4,31 @@ let numberOfDiceRoll = document.querySelector('number-of-dice-roll');
 let letsRoll = document.querySelector('#lets-roll');
 
 
+
 var dieRolls = []
+
+dieRolls.push(1);
+console.log(dieRolls);
+
+dieRolls.push(2);
+console.log(dieRolls);
+
+dieRolls.push(3);
+console.log(dieRolls);
+
+dieRolls.push(4);
+console.log(dieRolls);
+
+dieRolls.push(5);
+console.log(dieRolls);
+
+dieRolls.push(6);
+console.log(dieRolls);
+
+
+
+
+
 
 
 
@@ -16,27 +40,8 @@ letsRoll.addEventListener("click", function(){
     let rolls = diceRollInput.value 
     console.log(rolls)
 
-    var letsRolls = {
-        sides: 6,
-        roll: function () {
-          var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-          return randomNumber;
-        }
-      }
-      
-      function printNumber(number) {
-        var diceRollInput = document.getElementById('diceRollInput');
-        diceRollInput.innerHTML = number;
-      }
-      
-      var diceRollInput = document.getElementById('button');
-      
-      diceRollInput.onclick = function() {
-        var result = dice.roll();
-        printNumber(result);
-      };
-      
-      
+    var letsRoll = Math.floor( Math.random() * 6 ) +1;
+alert('You rolled a ' + letsRoll);
 })
 
 
