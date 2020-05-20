@@ -7,42 +7,41 @@ let letsRoll = document.querySelector('#lets-roll');
 
 var dieRolls = []
 
-dieRolls.push(1);
-console.log(dieRolls);
-
-dieRolls.push(2);
-console.log(dieRolls);
-
-dieRolls.push(3);
-console.log(dieRolls);
-
-dieRolls.push(4);
-console.log(dieRolls);
-
-dieRolls.push(5);
-console.log(dieRolls);
-
-dieRolls.push(6);
-console.log(dieRolls);
 
 
 
 
 
-
-
-
-
-
-letsRoll.addEventListener("click", function(){
+letsRoll.addEventListener("click", function () {
     console.log("lets-roll");
     console.log(diceRollInput.value)
-    let rolls = diceRollInput.value 
+    let rolls = diceRollInput.value
     console.log(rolls)
 
-    var letsRoll = Math.floor( Math.random() * 6 ) +1;
-alert('You rolled a ' + letsRoll);
+    let letsPlay = 0
+
+    for (let i = 0; i < rolls; i++) {
+     letsPlay = Math.floor(Math.random() * 6) + 1;
+    console.log('You rolled a ' + letsPlay);
+
+    dieRolls.push(letsPlay)
+    
+    
+    }
+    console.log(dieRolls)
+
+   
+    function totalNumber (){
+        var x=document.getElementById("total-number").value;
+        document.getElementById("number-of-dice-roll"),innerHTML=Math.floor(x);
+    }
+
+
+
 })
+
+ 
+
 
 
 
