@@ -31,10 +31,13 @@ letsRoll.addEventListener("click", function () {
     console.log(dieRolls)
 
    
-    function totalNumber (){
-        var x=document.getElementById("total-number").value;
-        document.getElementById("number-of-dice-roll"),innerHTML=Math.floor(x);
+    var total = ["1", "2", "3", "4", "5", "6"];
+    var text = "16";
+    var i;
+    for (i = 0; i < total.length; i++) {
+      text += total[i] + "<br>";
     }
+    document.getElementById("total-number").innerHTML = text;
 
 
 
